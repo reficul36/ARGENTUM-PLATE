@@ -8,7 +8,7 @@ include(FetchContent)
 FetchContent_Declare(
     JUCE
     GIT_REPOSITORY https://github.com/reficul36/ARGENTUM-PLATE
-    GIT_TAG 7.0.12 # Stable JUCE 7 release version
+     GIT_TAG master
 )
 FetchContent_MakeAvailable(JUCE)
 
