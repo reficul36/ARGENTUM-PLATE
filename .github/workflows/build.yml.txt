@@ -1,0 +1,30 @@
+name: Build JUCE VST3 Plugin
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-windows:
+    name: Build VST3 (Windows x64)
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Configure CMake
+      # This tells the compiler to look specifically inside your DesktopPlugin folder
+      run: cmake -B build -S DesktopPlugin -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build Plugin
+      run: cmake --build build --config Release
+
+    - name: Upload VST3 Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ArgentumPlate-VST3-Windows
+        # Grabs the compiled .vst3 file from the build outputs
+        path: build/**/*_artefacts/Release/VST3/*.vst3

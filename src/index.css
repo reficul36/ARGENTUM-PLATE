@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: #07090c;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: ui-sans-serif, system-ui, "Segoe UI", Inter, sans-serif;
+  overscroll-behavior-y: none;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #232a34;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #33404f;
+}
+
+select option,
+select optgroup {
+  background: #0d1117;
+  color: #d4d4d8;
+}
+
+button {
+  cursor: pointer;
+}

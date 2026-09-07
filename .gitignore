@@ -1,0 +1,9 @@
+Set-Content .gitignore @"
+# Ignore local heavy JUCE builds and heavy IDE caches completely
+DesktopPlugin/Builds/
+DesktopPlugin/JuceLibraryCode/
+.vs/
+*.ipch
+*.db
+node_modules/
+"@
