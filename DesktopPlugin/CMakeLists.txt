@@ -7,7 +7,7 @@ project(ArgentumPlate VERSION 1.0.0 LANGUAGES CXX)
 include(FetchContent)
 FetchContent_Declare(
     JUCE
-    URL https://github.com/reficul36/ARGENTUM-PLATE
+    URL https://github.com/juce-framework/JUCE
 )
 FetchContent_MakeAvailable(JUCE)
 
