@@ -45,11 +45,12 @@ void ArgentumPlateAudioProcessor::releaseResources() {}
 
 bool ArgentumPlateAudioProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
 {
-    // Ensure the DAW uses stereo inputs and stereo outputs
-    if (layouts.getMainOutput() != juce::AudioChannelSet::stereo())
+    if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
         return false;
-    if (layouts.getMainInput() != juce::AudioChannelSet::stereo())
+
+    if (layouts.getMainInputChannelSet() != juce::AudioChannelSet::stereo())
         return false;
+
     return true;
 }
 
