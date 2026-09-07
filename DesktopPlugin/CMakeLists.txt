@@ -7,7 +7,10 @@ project(ArgentumPlate VERSION 1.0.0 LANGUAGES CXX)
 include(FetchContent)
 FetchContent_Declare(
     JUCE
-    URL https://github.com/juce-framework/JUCE
+    GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
+    GIT_TAG 8.0.4          # pin to a real release tag/branch, don't leave unpinned
+    GIT_SHALLOW TRUE
+    GIT_PROGRESS TRUE
 )
 FetchContent_MakeAvailable(JUCE)
 
