@@ -7,7 +7,7 @@ project(ArgentumPlate VERSION 1.0.0 LANGUAGES CXX)
 include(FetchContent)
 FetchContent_Declare(
     JUCE
-    GIT_REPOSITORY https://github.com
+    GIT_REPOSITORY https://github.com/reficul36/ARGENTUM-PLATE
     GIT_TAG 7.0.12 # Stable JUCE 7 release version
 )
 FetchContent_MakeAvailable(JUCE)
